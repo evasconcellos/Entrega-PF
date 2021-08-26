@@ -11,6 +11,6 @@ function add(producto, precio) {
 }
 
 function pagar() {   { 
-    window.alert("Vas a pagar los siguentes productos: \n"  + productos.join(",  \n"));
+    window.alert (`Vas a pagar los siguentes productos: \n`  + productos.join(" \n") + `\nEl total de su compra es: $${total}`);
 }
 }
