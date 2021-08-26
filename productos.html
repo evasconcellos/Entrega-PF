@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Almacén esotérico con los mejores productos del mercado, ingresá y hacé tu pedido"/>
+    <meta name="keywords" content="almacén,esotérico,universo,creo,piedras,lectura,sesiones,reiki,tarot,carta natal,revolución solar, ramos mejá"/>
+    <meta name="robots" content="index,follow"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="icon" href="IMG/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Almacén esotérico "Universo Creo"</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="logoContainer">
+        <img class="logo" src="IMG/logo.jpg" alt="logo" />
+      </div>
+
+      <nav class="navBar">
+        <div class="brandTitle"></div>
+        <a href="#navbarLinks" class="toggleButton">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div id="navbarLinks">
+        <ul>
+          <li><a href="#"><button id="checkout" class="button-checkout" onclick="pagar()">Carrito</button></a></li>
+        </ul>
+      </nav>
+    </header>
+
+      <main>
+        <!-- Inicia galería de productos -->
+      <section class="productos">
+  
+        <h2 class="productos__titulo">GALERÍA DE PRODUCTOS</h2>
+  
+        <div class="page-content">
+          <div class="product-container">
+            <h3 class="text-center">Pack velas x 2</h3>
+            <img src="IMG/Productos/velas2.jpg" alt="pack de 2 velas de diversos colores con el logo de Creo"></>
+            <h2>$300</h2>
+            <button class="button-add" onclick="add('Pack de 2 velas', 300)">Agregar al carrito</button>
+          </div>
+  
+  
+          <div class="product-container">
+            <h3 class="text-center">Portavelas(colores)</h3>
+            <img src="IMG/Productos/portavelas4.jpg" alt="porta velas de diversos colores"></>  
+            <h2>$500</h2>
+            <button class="button-add" onclick="add('Portavelas diversos colores', 500)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Kit cristales y loción</h3>
+            <img src="IMG/Productos/kit1.jpg" alt="kit alquimizante (botella de loción, bolsa con logo de creo y cristales de diversos colores"></>
+            <h2>$1250</h2>
+            <button class="button-add" onclick="add('Kit cristales y loción', 1250)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Kit sahumado</h3>
+            <img src="IMG/Productos/kitsahumador.jpg" alt="kit sahumador, con hiervas secas y carbones para quemar"></>
+            <h2>$550</h2>
+            <button class="button-add" onclick="add('Kit sahumado', 550)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Kit sahumado 2</h3>
+            <img src="IMG/Productos/kitsahumador2.jpg" alt="kit sahumador, sahumador de barro con hiervas secas y carbones dentro"></>
+            <h2>$750</h2>
+            <button class="button-add" onclick="add('Kit sahumado 2', 750)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Sahumador de barro</h3>
+            <img src="IMG/Productos/sahumadorbarro.jpg" alt="sahumador de barro con tapa con orificios y cadena para colgar"></>
+            <h2>$450</h2>
+            <button class="button-add" onclick="add('Sahumador de barro', 450)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Caja sahumerios</h3>
+            <img src="IMG/Productos/sahumerios2.jpg" alt="Caja de sahumerios de la marca Nag Champa"></>
+            <h2>$350</h2>
+            <button class="button-add" onclick="add('Caja sahumerios', 350)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Loción alquimizada</h3>
+            <img src="IMG/Productos/locion.jpg" alt="botella de spray de 50ml con locion alquimizante"></>
+            <h2>$350</h2>
+            <button class="button-add" onclick="add('Loción alquimizada', 350)">Agregar al carrito</button>          
+          </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Kit cristales 7 chakras</h3>
+            <img src="IMG/Productos/kitpiedraschakras.jpg" alt="7 cristales con los colores de los chakras"></>
+            <h2>$500</h2>
+            <button class="button-add" onclick="add('Kit cristales 7 chakras', 500)">Agregar al carrito</button>         
+           </div>
+  
+
+  
+          <div class="product-container">
+            <h3 class="text-center">Totebag</h3>
+            <img src="IMG/Productos/totebag.jpg" alt="Bolsas de tela de color negro y beige con el logo de Creo estampado"></>
+            <h2>$1800</h2>
+            <button class="button-add" onclick="add('Totebag', 1800)">Agregar al carrito</button>         
+           </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Caja Creo exterior</h3>
+            <img src="IMG/Productos/cajacreo.jpg" alt="Caja para regalo con manija y el logo de Creo"> 
+            <h2>$3000</h2>
+            <button class="button-add" onclick="add('Caja Creo', 3000)">Agregar al carrito</button>        
+            </div>
+  
+          <div class="product-container">
+            <h3 class="text-center">Caja Creo interior</h3>
+            <img src="IMG/Productos/cajacreo2.jpg " alt="Interior de la caja Creo que contiene, velas, sahumerios, un porta vela, una loción alquimizante, y 7 cristales con los colores de los chakras"></>
+            <h2 class="text-center">$3000</h2>           
+          </div>
+        </div>
+  
+  
+  
+  
+      </section>
+        <!-- Fin galería de productos -->
+      </main>
+
+
+ <script src="js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+ </body>
+</html>
