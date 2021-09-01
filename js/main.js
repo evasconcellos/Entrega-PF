@@ -42,7 +42,7 @@ function sumaTotal() {
 
 function montoFinal() {
   let financiacion = prompt(
-    `El monto a pagar es: ${sumaTotal()} , elija su método de pago: \n\n1. Efectivo = Accedes a un 5% de descuento sobre el total. \n2. Tarjeta de crédito o débito = ${sumaTotal()}.`
+    `El monto a pagar es: ${sumaTotal()} , elija su método de pago:\n1. Efectivo = Accedes a un 5% de descuento sobre el total. \n2. Tarjeta de crédito o débito = ${sumaTotal()}.`
   );
 
   if (financiacion == "1") {
@@ -55,12 +55,12 @@ function montoFinal() {
 
 function compraTotal() {
   alert(
-    `Felicidades, vas a comprar el producto: ${
+    `Felicidades, vas a comprar: ${cantidad} "${
       productos[articulos].nombre
-    }. Su total es de: $${montoFinal()} `
+    }".\n\nSu total es de: $${montoFinal()} `
   );
   alert(
-    "En caso de querer, podés agregar más productos al carrito haciendo click en los botones predefinidos"
+    "En caso de querer, podés agregar más productos al carrito haciendo click en los botones predefinidos."
   );
 }
 
@@ -84,7 +84,7 @@ function pagar() {
     window.alert(
       `Tenés disponible en el carrito: ${cantidad} "${
         productos[articulos].nombre
-      }", por un total de: $${sumaTotal()}, le vas a agregar lo siguiente: \n` +
+      }", por un total de: $${sumaTotal()}.\nLe vas a agregar lo siguiente: \n` +
         carrito.join(" \n") +
         `\nEl total de tu compra es de: $${resultado}`
     );
