@@ -40,11 +40,11 @@ function sumaTotal() {
   }
 }
 
-function montoFinal() {
-  let financiacion = prompt(
-    `El monto a pagar es: ${sumaTotal()} , elija su método de pago:\n1. Efectivo = Accedes a un 5% de descuento sobre el total. \n2. Tarjeta de crédito o débito = ${sumaTotal()}.`
-  );
+let financiacion = prompt(
+  `El monto a pagar es: ${sumaTotal()} , elija su método de pago:\n1. Efectivo = Accedes a un 5% de descuento sobre el total. \n2. Tarjeta de crédito o débito = ${sumaTotal()}.`
+);
 
+function montoFinal() {
   if (financiacion == "1") {
     const efectivo = sumaTotal() * 0.95;
     return efectivo;
@@ -76,7 +76,11 @@ function add(producto, precio) {
 
   document.getElementById("checkout").innerHTML = `Agregar $${total}`;
 
-  resultado = total + sumaTotal();
+  if ((add = true && financiacion == "1")) {
+    resultado = (total + sumaTotal()) * 0.95;
+  } else {
+    resultado = total + sumaTotal();
+  }
 }
 
 function pagar() {
