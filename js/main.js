@@ -76,10 +76,10 @@ function add(producto, precio) {
 
   document.getElementById("checkout").innerHTML = `Agregar $${total}`;
 
-  if ((add = true && financiacion == "1")) {
-    resultado = (total + sumaTotal()) * 0.95;
+  if ((add == true && financiacion == "1")) {
+    resultado = Number(total + sumaTotal()) * 0.95;
   } else {
-    resultado = total + sumaTotal();
+    resultado = Number(total + sumaTotal());
   }
 }
 
