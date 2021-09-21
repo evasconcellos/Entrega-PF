@@ -1,5 +1,6 @@
 
 let carrito = [];
+let total = 0;
 
 
 function storageCarrito () {
@@ -74,19 +75,17 @@ function addCarrito(nombre) {
 }
 
 
-// Esto queda horrible pero la idea era ir probando cómo hacerlo.
 
 function pagandoCompra(){ 
   let alCarrito = ``;
   carrito.forEach((e) => {
       alCarrito += `
-      <h2 class="text-center">Vas a pagar: </h2>
       <div class="alCarrito">
       <img class="carritoImg" src="${e.img}"/>
       <p>${e.nombre}</p>
-      <p>$ ${e.precio}</p>
+      <p>$ ${e.precio}</p><span class="btn btn-danger">x</span>
       </div> `
   })
-  $("#contenedorDePago").html(alCarrito);
+  $("#contentModal").html(alCarrito);
   }
 
