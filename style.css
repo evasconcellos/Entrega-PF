@@ -166,7 +166,6 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     background-color: #44446b;
-    color: white;
   }
   .brandTitle {
     font-size: 1rem;
@@ -250,7 +249,7 @@ nav a:hover {
     justify-content: space-around;
   }
   nav li a {
-    color: beige;
+    color: rgb(2, 2, 0);
     font-size: 1.5rem;
     text-decoration-line: none;
   }

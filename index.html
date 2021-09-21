@@ -17,7 +17,7 @@
     />
     <script src="/js/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-
+    <script  src="js/productos.js" ></script>
     <script  src="js/main.js" defer ></script>
   </head>
   <body>
@@ -50,15 +50,14 @@
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                      <div class="modal-header">
+                      <div class="modal-header ">
                         <h5 class="modal-title" id="exampleModalLongTitle">Vas a pagar:</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </button>
                       </div>
                       <div class="modal-body" id="contentModal">  
                       </div>
                       <div class="modal-footer">                                  
-                        <button type="button" class="button-checkout">Comprar</button>
+                        <button type="button" class="button-checkout" onclick="comprar(elemento)" >PAGAR</button>
                       </div>
                     </div>
                   </div>
