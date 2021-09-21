@@ -89,3 +89,34 @@ function pagandoCompra(){
   $("#contentModal").html(alCarrito);
   }
 
+
+  function toMercadoPago() {
+  const elementosMercadopago = carrito.map(productos => {
+    return {
+        "title": productos.name,
+        "description": "",
+        "picture_url": productos.img,
+        "category_id": "",
+        "quantity": 1,
+        "currency_id": "ARS",
+        "unit_price": productos.precio
+    }
+})
+
+// Datos a enviar
+
+const elemento = { "items": elementosMercadopago };
+
+$.ajaxSetup({
+    headers: {
+        'Authorization': ' Bearer TEST-7050252595143620-092102-6834e3dd78b1c5a81ed20fc88bc5d8b8-173990757',
+        'Content-Type': 'application/json'
+    }
+});
+
+// El callback y la peticion
+$.post("https://api.mercadopago.com/checkout/preferences", JSON.stringify(elemento), (respuesta, status) => {
+    console.log(respuesta);
+});
+}
+toMercadoPago()
