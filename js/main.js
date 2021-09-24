@@ -97,7 +97,6 @@ $.ajaxSetup({
 // El callback y la peticion
 $.post(API, JSON.stringify(datosDelPago), (respuesta, status) => {
     const linkPago = respuesta.init_point
-    console.log(linkPago);
     window.open(`${linkPago}`);
 });
 }
