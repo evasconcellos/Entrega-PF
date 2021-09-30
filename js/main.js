@@ -56,12 +56,20 @@ function pagandoCompra(){
       alCarrito += `
       <div class="alCarrito">
       <img class="carritoImg" src="${e.img}"/>
-      <p>${e.nombre}</p>
-      <p>$ ${e.precio}</p><button class="btn btn-danger">x</button>
+      <p class="font-weight-bolder text-secondary">${e.nombre}</p>
+      <p class="font-weight-bolder text-dark">$${e.precio}</p>
       </div> `
   })
   $("#contentModal").html(alCarrito);
   }
+
+const vaciarCarrito = document.getElementById("vaciar-carrito").addEventListener('click', limpiarCarrito)
+function limpiarCarrito(e){     
+    localStorage.clear();
+    carrito = [];
+    document.getElementById("contentModal").innerHTML = carrito    
+    document.getElementById("contadorCarrito").innerHTML = carrito.length;
+}
 
 
 
@@ -100,3 +108,8 @@ $.post(API, JSON.stringify(datosDelPago), (respuesta, status) => {
     window.open(`${linkPago}`);
 });
 }
+
+
+
+
+

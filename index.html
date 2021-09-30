@@ -54,10 +54,14 @@
                         <h5 class="modal-title" id="exampleModalLongTitle">Vas a pagar:</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
+              
                       <div class="modal-body" id="contentModal">  
+                      
                       </div>
-                      <div class="modal-footer">                                  
-                        <button type="button" class="button-checkout" onclick="comprar(elemento)" >PAGAR</button>
+                      <div class="modal-footer">        
+                        <button type="button" class="btn btn-danger" id="vaciar-carrito" ">VACIAR</button>                             
+                        <button type="button" class="btn btn-success" onclick="comprar(elemento)" >PAGAR</button>
+                                                   
                       </div>
                     </div>
                   </div>
@@ -74,6 +78,9 @@
       <section class="productos">
   
         <h2 class="productos__titulo">GALERÍA DE PRODUCTOS</h2>
+
+
+       
   
         <div id="page-content">
 
